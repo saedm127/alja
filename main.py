@@ -1,11 +1,12 @@
 import asyncio
-from pyrogram import Client, filters, enums
+from pyrogram import Client, filters, enums, idle
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 
 # --- SOZLAMALAR ---
+# Kod endi Railway'dagi Variables nomlarini to'g'ri o'qiydi
 API_ID = int(os.getenv("API_ID"))
 API_HASH = os.getenv("API_HASH")
 STRING_SESSION = os.getenv("STRING_SESSION")
@@ -13,7 +14,7 @@ SOURCE_CHANNEL = os.getenv("SOURCE_CHANNEL")
 
 app = Client("my_userbot", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION)
 
-# Global o'zgaruvchilar (Bazasiz ishlaydi)
+# Global o'zgaruvchilar
 is_running = False
 interval_minutes = 5
 last_message_id = 0
@@ -78,7 +79,7 @@ async def main():
     await app.start()
     print("Bot muvaffaqiyatli ishga tushdi!")
     app.loop.create_task(distribution_task())
-    await asyncio.gather(app.get_me()) # Botni ushlab turish
+    await idle() # Bot to'xtab qolmasligi uchun muhim qator
 
 if __name__ == "__main__":
     app.run(main())
