@@ -9,7 +9,7 @@ load_dotenv()
 API_ID = int(os.getenv("API_ID"))
 API_HASH = os.getenv("API_HASH")
 STRING_SESSION = os.getenv("STRING_SESSION")
-SOURCE_CHANNEL = os.getenv("SOURCE_CHANNEL") # Kanal ID yoki username
+SOURCE_CHANNEL = os.getenv("SOURCE_CHANNEL")
 
 app = Client("my_userbot", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION)
 
