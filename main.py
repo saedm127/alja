@@ -6,10 +6,10 @@ import os
 load_dotenv()
 
 # --- SOZLAMALAR ---
-API_ID = int(os.getenv("30302100"))
-API_HASH = os.getenv("3fd819978fa769fb0fae89d14923fd74")
-STRING_SESSION = os.getenv("BQHOX5QAv4GNGfkgn63CY9aW_YoOVleew34Kb3DM-AE2-iC_NAYqNHZ7CtUdsRVzJKAD1X8O-3JXiKDCAtb_5l3KT04q98Uo4QDCr6pXvSpnY10dG0qu9t9s66Xka7kFYfFeLiWc3473n92SNEIqShFE9YwHRaopSXaOmDNubjL0NRDp547a_UHgt3ukai5eijjZYclkNHkFqXRsO8PsFhVEwCqrTfZJ1XonyrTPOPUx1m8-cfjsbHBShLJGde797lWf075pHLIaTdwL-UBUie-5P6bn6q6uocLY0G4634K61Xv93qQ3Rex0AYPjtHIQTEosHLVkFZV4K4HkXfDG1JDfhgF0HQAAAAH_Acc2AA")
-SOURCE_CHANNEL = os.getenv("3915622076") # Kanal ID yoki username
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+STRING_SESSION = os.getenv("STRING_SESSION")
+SOURCE_CHANNEL = os.getenv("SOURCE_CHANNEL") # Kanal ID yoki username
 
 app = Client("my_userbot", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION)
 
